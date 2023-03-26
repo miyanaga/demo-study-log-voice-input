@@ -47,7 +47,6 @@ async function transcribe() {
 
     const res = await Axios.post('https://api.openai.com/v1/audio/transcriptions', formData, {
       headers: {
-        'Content-Type': 'multipart/form-data',
         'Authorization': `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
       }
     })
